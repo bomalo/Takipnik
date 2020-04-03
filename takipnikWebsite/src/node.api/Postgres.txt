@@ -1,0 +1,10 @@
+master_password: test  
+other_password: Takipnik
+db_Name: Takipnik
+
+
+to build in Typscript for node.js use cntlr shift B
+
+First build to generate the js files
+then in cmd prompt cd to the C:\Users\Bobby\Documents\Angular_projects\takipnikWebsite\dist\out-tsc\src\node.api
+folder to run `node connection.js`

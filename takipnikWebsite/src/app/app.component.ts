@@ -16,7 +16,7 @@ export class AppComponent {
     if (this.navbarOpen) {
       setTimeout(()=>{  
       this.navbarOpen = false;
-      }, 3000);
+      }, 4000);
     }
   }
 }

@@ -9,7 +9,7 @@ import { ShowsComponent } from './shows/shows.component';
 import { MerchComponent } from './merch/merch.component';
 import { HomeComponent } from './home/home.component';
 
-const appRoutes: Routes = [
+export const appRoutes: Routes = [
   { path: 'home', 
     component: HomeComponent 
   },

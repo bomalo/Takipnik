@@ -1,15 +1,18 @@
 import * as express  from 'express';
-const hostname = 'localhost';
-const port = 3000; 
-const server = express();
+import { tshirts } from './routes/TShirtRoutes';
+import { sequelize, initializeDatabase, populateData } from './connection';
+import { app } from './app'
+import { createServer } from 'http';
 
-//api name is just a preference
-server.get('/api/', (req, res, next) => {   
-  res.statusCode = 200;   
-  res.setHeader('Content-Type', 'text/plain');   
-  res.end('Hello World');
-});
-server.listen(port, hostname, () => {     
-  // connect to the DB
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+const port = process.env.PORT || 3000;
+
+(async () => {
+  await sequelize.sync({force: true});
+initializeDatabase();
+populateData();
+  createServer(app)
+    .listen(
+      port,
+      () => console.info(`Server running on port ${port}`)
+    );
+})();

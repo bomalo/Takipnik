@@ -1,44 +1,18 @@
-<div class="gallery">
-  <a target="_blank" href="assets/OnLedge.jpg">
-    <img src="assets/OnLedge.jpg"  width="600" height="400">
-  </a>
-  <!-- <div class="desc">Adding some Electricity</div> -->
-</div>
+<ng-container *ngIf="images?.length > 0 && !isLoading; else showSpinner">
 
-<div class="gallery">
-  <a target="_blank" href="assets/OnLedge.jpg">
-    <img src="assets/blueFaces.jpg"  width="600" height="400">
+<ng-container *ngFor="let image of images">
+  <div class="gallery">
+  <a target="_blank" href={{image.url}}>
+    <img src={{image.url}}  width="600" height="400">
   </a>
-  <!-- <div class="desc">Adding some Electricity</div> -->
 </div>
-<div class="gallery">
-  <a target="_blank" href="assets/OnLedge.jpg">
-    <img src="assets/coverPic.jpg"  width="600" height="400">
-  </a>
-  <!-- <div class="desc">Adding some Electricity</div> -->
-</div>
-<div class="gallery">
-  <a target="_blank" href="assets/OnLedge.jpg">
-    <img src="assets/InkedCrotchShot.jpg"  width="600" height="400">
-  </a>
-  <!-- <div class="desc">Adding some Electricity</div> -->
-</div>
-<div class="gallery">
-  <a target="_blank" href="assets/OnLedge.jpg">
-    <img src="assets/justFun.jpg"  width="600" height="400">
-  </a>
-  <!-- <div class="desc">Adding some Electricity</div> -->
-</div>
-<div class="gallery">
-  <a target="_blank" href="assets/OnLedge.jpg">
-    <img src="assets/Ledge_sit.jpg"  width="600" height="400">
-  </a>
-  <!-- <div class="desc">Adding some Electricity</div> -->
-</div>
-<div class="gallery">
-  <a target="_blank" href="assets/OnLedge.jpg">
-    <img src="assets/overTheBoxes.jpg"  width="600" height="400">
-  </a>
-  <!-- <div class="desc">Adding some Electricity</div> -->
-</div>
+</ng-container>
+
+</ng-container>
+
+<ng-template #showSpinner>
+   <div class="centerSpinner">
+    <fa-icon slot="start" [icon]="faSpinner" size="6x" [spin]="true" style="color:white"></fa-icon> 
+   </div>
+</ng-template>
 

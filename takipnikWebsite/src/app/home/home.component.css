@@ -8,8 +8,29 @@
 }
 .bandPicture {
     background-image: url(../../assets/Ledge_sit.jpg);
-    padding-bottom: 37.5%; /* = ( 600 / 1600 ) x 100 */
+    background-position: center;
+    padding-bottom: 37.5%; 
     background-size: cover;
-    min-height: 20em;
+    min-height: 18em;
     margin-top: 10px;
+}
+.socialMediaIcons {
+    text-align: center;
+}
+.fa {
+    margin: 2%;
+    font-size: 4em;
+    width: 2em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Facebook */
+.fa-facebook {
+  /* background: #3B5998;
+  color: white; */
 }

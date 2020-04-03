@@ -1,1 +1,38 @@
-<p>merch works!</p>
+<ng-container *ngIf="tshirts?.length > 0; else showSpinner">
+
+<div class="col-md-12">
+    <div class="col-md-3">
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Blue</mat-card-title>
+    <mat-card-subtitle>Standard Cut</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="assets/shirts.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      classic formfort fit
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+       <button
+        class="snipcart-add-item button button1"
+        data-item-id="2"
+        data-item-name="T-Shirt"
+        data-item-price="15.00"
+        data-item-weight="1"
+        data-item-url="./tshirt"
+        data-item-description="T-Shirt">
+            Buy
+    </button>
+  </mat-card-actions>
+</mat-card>
+    </div>
+</div>
+
+</ng-container>
+
+<ng-template #showSpinner>
+   <div class="centerSpinner">
+    <fa-icon slot="start" [icon]="faSpinner" size="6x" [spin]="true" style="color:white"></fa-icon> 
+   </div>
+</ng-template>
